@@ -74,6 +74,10 @@ h2 {
     color: white;
 }
 
+.errotext {
+    color: rgb(215, 96, 96);
+}
+
 .communicationItem {
 	color: #fff;
     display: -moz-box;
