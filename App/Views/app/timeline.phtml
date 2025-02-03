@@ -1,14 +1,15 @@
 <nav class="navbar navbar-expand-lg menu">
 	<div class="container">
-	  <div class="navbar-nav">
+	  <div class="navbar-nav navFeed ">
 	  	<a class="menuItem" href="/timeline">
-	  		Home
-	  	</a>
+			Home
+		</a>
+		
+		<img src="/img/x_feed.svg" class="menuIco" />
 
-	  	<a class="menuItem" href="/sair">
-	  		Sair
-	  	</a>
-			<img src="/img/x.svg" class="menuIco" />
+		<a class="menuItem" href="/sair">
+			Sair
+		</a>	
 	  </div>
 	</div>
 </nav>
@@ -58,8 +59,8 @@
 		<div class="col-md-6">
 			<div class="row mb-2">
 				<div class="col tweetBox">
-					<form>
-						<textarea class="form-post" id="exampleFormControlTextarea1" rows="3" placeholder="Digite seu twitter"></textarea>
+					<form method="post" action="/tweet">
+						<textarea class="form-post" name="tweet" id="exampleFormControlTextarea1" rows="3" placeholder="Digite seu twitter"></textarea>
 						
 						<div class="col mt-2 d-flex justify-content-end">
 							<button type="submit" class="btn btn-primary">Tweet</button>
@@ -69,33 +70,26 @@
 				</div>
 			</div>
 
-			<div class="row tweet">
-				<div class="col">
-					<p><strong>Nome do Usuário</strong> <span class="text text-muted">- data tweet</span></p>
-					<p>Conteúdo do tweet</p>
+			<?php foreach($this->view->tweets as $id_tweet => $tweet) { ?>
+				<div class="row tweet">
+					<div class="col">
+						<p>
+							<strong>
+								<?=$tweet['nome']?>
+							</strong>
+							<small><span class="text text-muted">- <?=$tweet['data']?></span></small>
+						</p>
+						<p><?=$tweet['tweet']?></p>
 
-					<br />
-					<form>
-						<div class="col d-flex justify-content-end">
-							<button type="submit" class="btn btn-danger"><small>Remover</small></button>
-						</div>
-					</form>
+						<br />
+						<form>
+							<div class="col d-flex justify-content-end">
+								<button type="submit" class="btn btn-danger"><small>Remover</small></button>
+							</div>
+						</form>
+					</div>
 				</div>
-			</div>
-
-			<div class="row tweet">
-				<div class="col">
-					<p><strong>Nome do Usuário</strong> <span class="text text-muted">- data tweet</span></p>
-					<p>Conteúdo do tweet</p>
-
-					<br />
-					<form>
-						<div class="col d-flex justify-content-end">
-							<button type="submit" class="btn btn-danger"><small>Remover</small></button>
-						</div>
-					</form>		
-				</div>
-			</div>
+			<?php } ?>
 
 
 		</div>
