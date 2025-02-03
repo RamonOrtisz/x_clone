@@ -145,7 +145,6 @@ h2 {
 }
 .menuIco {
     width: 31px;
-    height: 23px;
     position:absolute;
     top:50%;
     left:50%;
@@ -153,6 +152,11 @@ h2 {
     margin-left:-15px;
 }
 
+.navFeed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .perfil {
     border-radius: 10px;
     background: #fff;
@@ -236,4 +240,9 @@ h2 {
 }
 .tweet:hover {
     background-color: #0a0a0a;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: space-between;
 }
