@@ -31,13 +31,11 @@ h2 {
     color: #000;
     font-weight: bold;
     background-color: white;
-    border: 2px solid #fff;
 }
 .btn-primary:hover {
     color: #ffffff;
     font-weight: bold;
     background-color: #181818;
-    border: 2px solid #fff;
 }
 
 .banner {
@@ -60,8 +58,9 @@ h2 {
 
 .form-control {
 	background-color: #fff;
-    border: 1px solid #e6ecf0;
-    border-radius: 3px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
 }
 .form-post{
     background-color: transparent;
@@ -117,11 +116,20 @@ h2 {
 }
 
 .card-body{
-    background-color: #151515;
+    border: none;
+    border-radius: 5px;
 }
 
 .card{
-    margin-top: 200px;
+    margin-top: 25px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #3b3b3b;
+}
+
+.cardH:hover {
+    background-color: rgba(27, 27, 27, 0.5);
+    cursor: pointer;
 }
 
 .menu {
@@ -245,4 +253,33 @@ h2 {
 .navMenu {
     display: flex;
     justify-content: space-between;
+}
+
+.btnFol {
+    background-color: #1267ad;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+.btnFol:hover {
+    background-color: #298ee1;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btnUnf {
+    background-color: #000;
+    border: 2px solid #3b3b3b;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fff;
+}
+.btnUnf:hover {
+    background-color: #521111;
+    color: #fff;
+    text-decoration: none;
+}
+.user{
+    font-size: 22px;
+    color: #fff;
 }
