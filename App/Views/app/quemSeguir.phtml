@@ -87,8 +87,13 @@
 								
 									<div class="col-md-6 d-flex justify-content-end">
 										<div>
-											<a href="#" class="btnFol">Seguir</a>
-											<a href="#" class="btnUnf">Unfollow</a>
+											<?php if($usuario['seguindo_sn'] == 0) { ?>
+												<a href="/acao?acao=seguir&id_usuario=<?=$usuario['id']?>" class="btnFol">Seguir</a>
+											<?php } ?>
+
+											<?php if($usuario['seguindo_sn'] == 1) { ?>
+												<a href="/acao?acao=unfollow&id_usuario=<?=$usuario['id']?>" class="btnUnf">Unfollow</a>
+											<?php } ?>
 										</div>
 									</div>
 								</div>
